@@ -10,10 +10,26 @@ query = 'CREATE TABLE IF NOT EXISTS charla (autor VARCHAR, titulo VARCHAR)'
 cursor.execute(query)
 # ----------------------------------------------------------------------------------------------------------------------
 
-# Obtener un elemento
+# Llenar bbdd
+datos = [('Victor Suarez', 'Coding Dojo'),
+         ('Miguel Angel', 'Kotlin Mola y lo sabes'),
+         ('Cristo calvo', 'SQLAlchemy rules'),
+         ('Juanjo Salvador', 'Como hacer tu API REST con Django en una noche'),
+         ('Juan Pedro Ramos', 'Como hacer tu API REST con Django en una noche')]
+query = 'INSERT INTO charla VALUES (?,?)'
+cursor.executemany(query, datos)
+
+# Ver datos en tabla
 query = 'SELECT * FROM charla'
 cursor.execute(query)
-print(cursor.fetchone())
+elementos = cursor.fetchall()
+for elemento in elementos:
+    print(elemento)
+print('---------------------------------------------------------------------------------------------------------------')
+
+# Escoger un dato
+autor = elementos[2][0]
+print('Autor mas calvo = {}'.format(autor))
 
 # ----------------------------------------------------------------------------------------------------------------------
 # Guardar la operacion
