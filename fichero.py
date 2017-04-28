@@ -6,5 +6,9 @@ conector = sqlite3.connect('base_de_datos.db')
 cursor = conector.cursor()
 # Escribir la orden -> Generar una tabla
 query = 'CREATE TABLE charla (autor VARCHAR, titulo VARCHAR)'
-# Ejecutir la orden
+# Ejecutar la orden
 cursor.execute(query)
+# Guardar la información
+conector.commit()
+# Cerrar la conexión
+conector.close()
