@@ -7,8 +7,12 @@ cursor = conector.cursor()
 # Escribir la orden -> Generar una tabla
 query = 'CREATE TABLE charla (autor VARCHAR, titulo VARCHAR)'
 # Ejecutar la orden
-cursor.execute(query)
-# Guardar la información
-conector.commit()
-# Cerrar la conexión
-conector.close()
+try:
+    cursor.execute(query)
+except sqlite3.OperationalError as e:
+    print('Error creando tabla "charla" = {}'.format(e))
+finally:
+    # Guardar la operacion
+    conector.commit()
+    # Cerrar la conexion
+    conector.close()
