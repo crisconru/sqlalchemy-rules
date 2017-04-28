@@ -29,6 +29,7 @@
                 <marker date="1493402744070" expanded="true" signature="484:504" ph="SELECT * FRO... charla" />
               </folding>
             </state>
+
           </provider>
         </entry>
       </file>
@@ -87,8 +88,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
