@@ -8,6 +8,14 @@ cursor = conector.cursor()
 query = 'CREATE TABLE IF NOT EXISTS charla (autor VARCHAR, titulo VARCHAR)'
 # Ejecutar la orden
 cursor.execute(query)
+# ----------------------------------------------------------------------------------------------------------------------
+
+# Obtener un elemento
+query = 'SELECT * FROM charla'
+cursor.execute(query)
+print(cursor.fetchone())
+
+# ----------------------------------------------------------------------------------------------------------------------
 # Guardar la operacion
 conector.commit()
 # Cerrar la conexion
