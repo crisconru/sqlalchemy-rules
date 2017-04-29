@@ -9,7 +9,7 @@ Base = declarative_base()
 class Charla(Base):
     __tablename__ = 'charla'
     id = Column(Integer, primary_key=True)
-    autor = Column(String(250), unique=True)
+    autor = Column(String(250))
     titulo = Column(String(250))
 
 
