@@ -28,8 +28,8 @@ for elemento in elementos:
 print('---------------------------------------------------------------------------------------------------------------')
 
 # Escoger un dato
-autor = elementos[2][0]
-print('Autor mas calvo = {}'.format(autor))
+calvo = elementos[2]
+print('Autor mas calvo = {}'.format(calvo[0]))
 
 # ----------------------------------------------------------------------------------------------------------------------
 # Guardar la operacion
