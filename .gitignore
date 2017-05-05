@@ -1,3 +1,4 @@
 *.db
 .idea/
 __pychache__/
+base_de_datos.db
